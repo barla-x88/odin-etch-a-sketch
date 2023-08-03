@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #4b5563;
+}
+
+.grid-container {
+  margin: 6rem auto;
+
+  height: 960px;
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  flex: 1 0 auto;
+}
+.square {
+  background-color: white;
+  border: 1px solid rgb(247, 242, 242);
+  flex: 1 1 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: stretch;
+  flex: 1 1 auto;
+}
