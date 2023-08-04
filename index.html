@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="menubar">
+      <form>
+        <label for="gridSize">Create new Grid: <span id="size"></span></label>
+        <input
+          type="range"
+          name="gridSize"
+          id="gridSize"
+          max="100"
+          min="16"
+          value="16"
+        />
+        <button type="button" id="create">Create</button>
+      </form>
+    </div>
+    <div class="app"></div>
     <script src="script.js"></script>
   </body>
 </html>

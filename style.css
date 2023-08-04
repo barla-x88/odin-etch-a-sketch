@@ -14,8 +14,24 @@ body {
   background-color: #4b5563;
 }
 
+body > .menubar {
+  margin: 0 auto 0 auto;
+  padding: 1rem;
+  color: white;
+  width: 960px;
+  font-weight: 600;
+}
+
+form {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .grid-container {
-  margin: 6rem auto;
+  margin: 0 auto;
 
   height: 960px;
   width: 960px;
@@ -26,7 +42,7 @@ body {
 }
 .square {
   background-color: white;
-  border: 1px solid rgb(247, 242, 242);
+  border: 1px solid rgb(250, 249, 249);
   flex: 1 1 auto;
 }
 
@@ -34,4 +50,16 @@ body {
   display: flex;
   justify-content: stretch;
   flex: 1 1 auto;
+}
+
+.mousehover {
+  background-color: grey;
+}
+
+#gridSize {
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
 }
