@@ -1,7 +1,12 @@
 const rangeInput = document.querySelector('#gridSize');
 const size = document.querySelector('#size');
 const createBtn = document.querySelector('#create');
+const downloadBtn = document.querySelector('#download');
+const app = document.querySelector('.app');
+const popup = document.querySelector('.popup');
+
 let container;
+let canvasapp;
 
 const createGrid = (size) => {
   const containerDiv = document.createElement('div');
@@ -66,6 +71,22 @@ const init = () => {
     container = createGrid(Number(rangeInput.value));
     document.querySelector('.app').prepend(container);
     setHover();
+  });
+
+  downloadBtn.addEventListener('click', () => {
+    html2canvas(container, { width: 860, height: 860 }).then(function (canvas) {
+      if (popup.lastElementChild.nodeName === 'CANVAS') {
+        popup.lastElementChild.remove();
+      }
+      popup.appendChild(canvas);
+      popup.classList.add('show-popup');
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape') {
+      popup.classList.remove('show-popup');
+    }
   });
 };
 
